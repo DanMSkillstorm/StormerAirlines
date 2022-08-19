@@ -1,0 +1,19 @@
+<form [formGroup] ="updateBookingForm" (ngSubmit) = "submit()">
+        <label for="passengerId">passenger ID</label>
+        <input 
+            placeholder={{booking.passengerId}}
+            class = "form-control" 
+            id = "passengerId" 
+            formControlName = "passengerId" 
+            name="passengerId">
+        <label for="flightNumber">Flight Number</label>
+        <input 
+            placeholder={{booking.flightNum}}
+            class = "form-control" 
+            id = "flightNumber" 
+            formControlName = "flightNumber" 
+            name="flightNumber">
+    <div class="btn-container">
+        <button class="btn btn-primary" type="update">Update</button>
+    </div>
+</form>

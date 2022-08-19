@@ -1,0 +1,35 @@
+<div class = "container">
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th>Flight Number</th>
+                <th>Departuring From</th>
+                <th>Arriving In</th>
+                <th>Passenger Count</th>
+                <th>Capacity</th>
+                <th>Departure Date</th>
+                <th>Departure Time</th>
+                <th>Arrival Date</th>
+                <th>Arrival Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let flight of flights">
+                <td>{{flight.flightNum}}</td>
+                <td>{{flight.depLocation}}</td>
+                <td>{{flight.arrLocation}}</td>
+                <td>{{flight.passengerCount}}</td>
+                <td>{{flight.passengerLimit}}</td>
+                <td>{{flight.depDate}}</td>
+                <td>{{flight.depTime}}</td>
+                <td>{{flight.arrDate}}</td>
+                <td>{{flight.arrTime}}</td>
+                <td class = "d-flex justify-content-center align-items-center">
+                    <a href="#" [routerLink]="['/flights/', flight.flightNum, 'view']" class="btn btn-info">View</a>
+                    <a href="#" [routerLink]="['/flights/', flight.flightNum, 'edit']" class="btn btn-primary h-100 d-flex justify-content-center align-items-center">Edit</a>
+                    <button type="button" (click)="deleteFlight(flight.flightNum)" class="btn btn-danger h-100 d-flex justify-content-center align-items-center!">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

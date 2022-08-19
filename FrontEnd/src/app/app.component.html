@@ -1,0 +1,23 @@
+<div class="logo_container">
+    <img id = "logo"  src='assets/images/skillstormLogo.png' />
+</div>
+<h1 class = "title">{{title}}</h1>
+
+<div class = "main">
+    <nav class = "navbar bg-light navbar-dark d-flex justify-content-around" style = "width:90%">
+        <ul class = "navbar-nav d-flex justify-content-around" style = "width:90%">
+            <li class = "nav-item d-flex justify-content-around" style = "width:90%">
+                <button class="m-1 btn btn-success btn-outline-primary w-25 h-90" routerLink="bookings">
+                    Bookings
+                </button>
+                <button class="m-1 btn btn-warning btn-outline-primary w-25 h-90" routerLink="flights">
+                    Flights
+                </button>
+                <button class="m-1 btn btn-danger btn-outline-primary w-25 h-90" routerLink="passengers">
+                    Passengers
+                </button>
+            </li>
+        </ul>
+    </nav>
+</div>
+<router-outlet></router-outlet>

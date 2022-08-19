@@ -1,0 +1,72 @@
+<form [formGroup] ="createFlightForm" (ngSubmit) = "submit()">
+    <div class = "form-group">
+        <div class = "row">
+            <div class = "col">
+                <label for="depLocation">Departure Location</label>
+                <input 
+                    class = "form-control" 
+                    id = "depLocation" 
+                    required
+                    formControlName = "depLocation" 
+                    name="depLocation">
+            </div>
+            <div class = "col">
+                <label for="arrLocation">Arrival Location</label>
+                <input 
+                    class = "form-control" 
+                    id = "arrLocation" 
+                    required
+                    formControlName = "arrLocation" 
+                    name="arrLocation">
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col">
+                <label for="depDate">Departure Date</label>
+                <input 
+                    class = "form-control" 
+                    id = "depDate"
+                    required
+                    formControlName = "depDate" 
+                    name="depDate">
+            </div>
+            <div class = "col">
+                <label for="depTime">Departure Time</label>
+                <input 
+                    class = "form-control" 
+                    id = "depTime" 
+                    required
+                    formControlName = "depTime" 
+                    name="depTime">
+            </div>
+            <div class = "col">
+                <label for="arrDate">Arrival Date</label>
+                <input 
+                    class = "form-control" 
+                    id = "arrDate" 
+                    required
+                    formControlName = "arrDate" 
+                    name="arrDate">
+            </div>
+            <div class = "col">
+                <label for="arrTime">Arrival Time</label>
+                <input 
+                    class = "form-control" 
+                    id = "arrTime" 
+                    required
+                    formControlName = "arrTime" 
+                    name="arrTime">
+            </div>
+        </div>
+        
+        <br>
+    </div>
+    <hr>
+    
+    <div class="btn-container">
+        <button class="btn btn-primary" type="create" [disabled]="!createFlightForm.valid">Create</button>
+    </div>
+    <div class="logo_container">
+        <img id = "logo"  src='assets/images/USAirports.png' />
+    </div>
+</form>

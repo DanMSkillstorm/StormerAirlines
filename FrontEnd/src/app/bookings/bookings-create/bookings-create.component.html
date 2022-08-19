@@ -1,0 +1,35 @@
+<div class = "m-1 updates-form">
+    <form [formGroup] ='createBooking' (ngSubmit) = "submit()">
+        <!--PASSENGER INFO
+        public firstName: string,
+        public lastName: string,
+        public job: string,
+        public email: string,
+        public age: number,
+        -->
+        <div class = "row">
+            <div class = "col">
+                <label for="passengerId">Passenger ID</label>
+                <input 
+                    class = "form-control" 
+                    id = "passengerId" 
+                    required
+                    formControlName = "passengerId"
+                    name="passengerId">
+            </div>
+            <div class = "col">
+                <label for="flightNum">Flight Number</label>
+            <input 
+                class = "form-control" 
+                id = "flightNum" 
+                required
+                formControlName = "flightNum" 
+                name="flightNum">
+            </div>
+        </div>
+        <hr>
+        <div class="btn-container">
+            <button class="btn btn-primary" type="create">Create</button>
+        </div>
+    </form>
+</div>  

@@ -1,0 +1,29 @@
+<div class = "container">
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Job</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let passenger of passengers">
+                <td>{{passenger.id}}</td>
+                <td>{{passenger.firstName}}</td>
+                <td>{{passenger.lastName}}</td>
+                <td>{{passenger.job}}</td>
+                <td>{{passenger.email}}</td>
+                <td>{{passenger.age}}</td>
+                <td>
+                    <a href="#" [routerLink]="['/passengers/', passenger.id, 'view']" class="btn btn-primary">View</a>
+                    <a href="#" [routerLink]="['/passengers/', passenger.id, 'edit']" class="btn btn-primary">Edit</a>
+                    <button type="button" (click)="deletePassenger(passenger.id)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

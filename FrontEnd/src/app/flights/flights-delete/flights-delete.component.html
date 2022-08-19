@@ -1,0 +1,15 @@
+<form [formGroup] ="deleteFlightForm" (ngSubmit) = "submit()">
+    <div class = "form-group">
+        <label for="flightNumber">Flight Number</label>
+        <input 
+            class = "form-control" 
+            id = "flightNumber" 
+            required
+            formControlName = "flightNumber" 
+            name="flightNumber">
+        <br>
+    </div>
+    <div class="btn-container">
+        <button class="btn btn-primary" type="delete">Delete</button>
+    </div>
+</form>

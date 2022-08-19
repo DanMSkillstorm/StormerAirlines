@@ -1,0 +1,74 @@
+<a href="#" routerLink="/flights/flights-table" class="btn btn-primary">Back</a>
+<form [formGroup] ="updateFlightForm" (ngSubmit) = "submit()">
+
+    <div class = "form-group">
+        <div class = "row">
+            <div class = "col">
+                <label for="depLocation">Departure Location</label>
+                <input 
+                    placeholder={{flight.depLocation}}  
+                    class = "form-control" 
+                    id = "depLocation" 
+                    formControlName = "depLocation" 
+                    name="depLocation">
+            </div>
+            <div class = "col">
+                <label for="arrLocation">Arrival Location</label>
+                <input 
+                placeholder={{flight.arrLocation}}
+                    class = "form-control" 
+                    id = "arrLocation" 
+                    formControlName = "arrLocation" 
+                    name="arrLocation">
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col">
+                <label for="depDate">Departure Date</label>
+                <input 
+                placeholder={{flight.depDate}}
+                    class = "form-control" 
+                    id = "depDate" 
+                    formControlName = "depDate" 
+                    name="depDate">
+            </div>
+            <div class = "col">
+                <label for="arrDate">Arrival Date</label>
+                <input 
+                placeholder={{flight.arrDate}}
+                    placeholder={{flight.arrDate}}
+                    class = "form-control" 
+                    id = "arrDate" 
+                    formControlName = "arrDate" 
+                    name="arrDate">
+            </div>
+            <div class = "col">
+                <label for="depTime">Departure Time</label>
+                <input
+                placeholder={{flight.depTime}} 
+                    placeholder={{flight.depTime}} 
+                    class = "form-control" 
+                    id = "depTime" 
+                    formControlName ="depTime" 
+                    name="depTime">
+            </div>
+            <div class = "col">
+                <label for="arrTime">Arrival Time</label>
+                <input 
+                placeholder={{flight.arrTime}}
+                    placeholder={{flight.arrTime}}
+                    class = "form-control" 
+                    id = "arrTime" 
+                    formControlName = "arrTime" 
+                    name="arrTime">
+            </div>
+        </div>
+        
+        <br>
+    </div>  
+   
+    <div class="btn-container">
+        <button class="btn btn-primary" type="update">Update</button>
+    </div>
+
+</form>

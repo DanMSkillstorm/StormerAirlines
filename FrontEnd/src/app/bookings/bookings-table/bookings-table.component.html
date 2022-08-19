@@ -1,0 +1,21 @@
+<div>
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th>Booking Number</th>
+                <th>Flight Number</th>
+                <th>Passenger ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let booking of bookings">
+                <td>{{booking.bookingNum}}</td>
+                <td>{{booking.flightNum}}</td>
+                <td>{{booking.passengerId}}</td>
+                <td>
+                    <button type="button" (click)="deleteBooking(booking.bookingNum)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

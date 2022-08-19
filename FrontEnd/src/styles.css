@@ -1,0 +1,76 @@
+
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+/* You can add global styles to this file, and also import other style files */
+/* Application-wide Styles */
+
+.logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center
+ }
+
+ .main{
+  display: flex;
+  align-items: space-evenly;
+  justify-content:space-evenly;
+  background-color: rgba(255, 127, 80, 0.753);
+  padding: 1%;
+  width: 100%;
+ }
+ 
+
+
+
+h1 {
+    color: #eee;
+    background-color: rgba(255, 127, 80, 0.753);;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+  }
+  h1.title{
+    display: flex;
+    font-variant:small-caps;
+    color: #eee;
+    justify-content: center;
+    align-content: flex-end;
+    font-size: 350%;
+  }
+  h2, h3 {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+  body {
+    margin: 2em;
+  }
+  body, input[type="text"], button {
+    color: #333;
+    font-family: Cambria, Georgia, serif;
+  }
+  button {
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  button:hover {
+    background-color: black;
+    color: white;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+  }
+  
+  /* everywhere else */
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }

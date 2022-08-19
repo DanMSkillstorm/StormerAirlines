@@ -1,0 +1,56 @@
+<a href="#" routerLink="/passengers/passengers-table" class="btn btn-primary">Back</a>
+
+<div class = "container">
+   
+        <table class = "table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Job</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{passenger.id}}</td>
+                    <td>{{passenger.firstName}}</td>
+                    <td>{{passenger.lastName}}</td>
+                    <td>{{passenger.job}}</td>
+                    <td>{{passenger.email}}</td>
+                    <td>{{passenger.age}}</td>
+                </tr>
+            </tbody>
+        </table>
+    <h3>Flights</h3>
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                
+                <th>Departuring From</th>
+                <th>Arriving In</th>
+                <th>Capacity</th>
+                <th>Departure Date</th>
+                <th>Departure Time</th>
+                <th>Arrival Date</th>
+                <th>Arrival Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <tr *ngFor="let flight of passenger.bookedFlights">
+                
+                <td>{{flight.depLocation}}</td>
+                <td>{{flight.arrLocation}}</td>
+                <td>{{flight.passengerLimit}}</td>
+                <td>{{flight.depDate}}</td>
+                <td>{{flight.depTime}}</td>
+                <td>{{flight.arrDate}}</td>
+                <td>{{flight.arrTime}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

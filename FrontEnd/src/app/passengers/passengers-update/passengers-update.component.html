@@ -1,0 +1,60 @@
+<div class="container">
+    <h1>Update Passenger Info</h1>
+   
+    <a href="#" routerLink="/passengers/passengers-table" class="btn btn-primary">Back</a>
+          
+    <form [formGroup]="updatePassengerForm" (ngSubmit)="submit()">
+        <div class = "row">
+            <div class = "col">
+                <label for="firstName">First Name</label>
+                <input 
+                    placeholder={{pas.firstName}}
+                    class = "form-control" 
+                    id = "firstName" 
+                    formControlName = "firstName"
+                    name="firstName">
+            </div>
+            <div class = "col">
+                <label for="lastName">Last Name</label>
+                <input 
+                    placeholder={{pas.lastName}}
+                    class = "form-control" 
+                    id = "lastName" 
+                    formControlName = "lastName" 
+                    name="lastName">
+                </div>
+            </div>
+            <div class = "row">
+                <label for="email">Email</label>
+                <input 
+                    placeholder={{pas.email}}
+                    class = "form-control" 
+                    id = "email" 
+                    formControlName = "email" 
+                    name="email">
+            </div>
+            <div class = "row">
+                <div class = "col">
+                    <label for="job">Job</label>
+                    <input 
+                        placeholder={{pas.job}}
+                        class = "form-control" 
+                        id = "job" 
+                        formControlName = "job" 
+                        name="job">
+            </div>
+            <div class = "col">
+                <label for="age">Age</label>
+                <input 
+                    placeholder={{pas.age}}
+                    class = "form-control" 
+                    id = "age" 
+                    formControlName = "age" 
+                    name="age">
+            </div>
+            <br>
+        </div>
+        
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+</div>
